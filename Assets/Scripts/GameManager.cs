@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityStandardAssets.Characters.FirstPerson;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 public class GameManager : MonoBehaviour
 {	
@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 	private bool isFinished = false;
 
 	// So that we can access the player's controller from this script
-	private FirstPersonController fpsController;
+	private ThirdPersonUserControl fpsController;
 
 
 	// Use this for initialization
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
 		Physics.autoSyncTransforms = true;
 
 		// Finds the First Person Controller script on the Player
-		fpsController = player.GetComponent<FirstPersonController> ();
+		fpsController = player.GetComponent<ThirdPersonUserControl> ();
 	
 		// Disables controls at the start.
 		fpsController.enabled = false;

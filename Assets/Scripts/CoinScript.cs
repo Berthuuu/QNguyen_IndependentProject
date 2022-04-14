@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CoinScript : MonoBehaviour
 {
+    public AudioClip audioClip;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +18,11 @@ public class CoinScript : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name == "FPSController")
+        if(other.name == "ThirdPersonController")
         {
+            AudioSource.PlayClipAtPoint(audioClip, transform.position);
             Destroy(gameObject);
+            
         }
     }
 }
