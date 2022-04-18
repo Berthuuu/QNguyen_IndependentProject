@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public GameObject[] objectPrefabs;
-    private float yPosRange = 15;
+    private float xPosRange = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +19,9 @@ public class SpawnManager : MonoBehaviour
     }
     void SpawnRandomObjects()
     {
-        float randYPos = Random.Range(-yPosRange, yPosRange);
+        float randXPos = Random.Range(0, xPosRange);
         int objectPrefabIndex = Random.Range(0, objectPrefabs.Length);
-        Vector3 randPos = new Vector3(0, randYPos, 20);
+        Vector3 randPos = new Vector3(0, randXPos, 100);
         Instantiate(objectPrefabs[objectPrefabIndex], randPos, objectPrefabs[objectPrefabIndex].transform.rotation);
     }
 }
