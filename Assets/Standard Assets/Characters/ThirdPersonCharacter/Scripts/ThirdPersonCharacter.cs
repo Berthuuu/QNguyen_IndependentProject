@@ -28,6 +28,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 		Vector3 m_CapsuleCenter;
 		CapsuleCollider m_Capsule;
 		bool m_Crouching;
+     
 
 
 		void Start()
@@ -195,6 +196,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 				// we preserve the existing y part of the current velocity.
 				v.y = m_Rigidbody.velocity.y;
 				m_Rigidbody.velocity = v;
+            
 			}
 		}
 

@@ -4,25 +4,8 @@ using UnityEngine;
 
 public class CoinScript : MonoBehaviour
 {
-    public AudioClip audioClip;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.name == "ThirdPersonController")
+        void OnCollisionEnter(Collision collision)
         {
-            AudioSource.PlayClipAtPoint(audioClip, transform.position);
-            Destroy(gameObject);
-            
+        Destroy(gameObject);
         }
     }
-}
